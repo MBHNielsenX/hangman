@@ -1,25 +1,14 @@
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Word hangman = new Word("hej");
+        Word hangmanWords = new Word("");
         ArrayList<Word> chosenWords = new ArrayList<Word>();
         intro();
-
-        hangman.setDifficulty(chosenWords);
-
-
-        for (int i = 0; i < chosenWords.size(); i++) {
-            System.out.println(chosenWords.get(i));
-
-        }
-        System.out.println();
-        System.out.println(hangman.randomWordFromList(chosenWords));
-
+        int difficulty = hangmanWords.setDifficulty(chosenWords);
+        String hangmanWord = hangmanWords.randomWordFromList(chosenWords).toString();
+        HangmanEngine.gameStart(hangmanWord, difficulty);
 
     }
     public static void intro() {

@@ -14,11 +14,9 @@ public class Word {
 
     @Override
     public String toString() {
-        return "HangmanWord{" +
-                "word='" + word + '\'' +
-                '}';
+        return word;
     }
-    public void setDifficulty(ArrayList<Word> chosenWords) {
+    public int setDifficulty(ArrayList<Word> chosenWords) {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nPress 1 for easy, press 2 for medium or press 3 for hard: ");
         int difficulty = sc.nextInt();
@@ -33,6 +31,7 @@ public class Word {
             setDifficulty(chosenWords);
         }
 
+        return difficulty;
     }
 
     public ArrayList<Word> setWordList(ArrayList<Word> chosenWords, int chosenDifficulty) {
