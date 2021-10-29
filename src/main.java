@@ -19,6 +19,7 @@ public class main {
         HangmanEngine.gameStart(hangmanWord, difficulty);
 
     }
+
     public static void intro(Scanner sc) {
 
         try {
@@ -36,6 +37,7 @@ public class main {
 
         }
     }
+
     public static void rules(Scanner sc) {
         System.out.println("\nThe rules are as follows ");
         System.out.println("You choose one of the following 3 difficulties easy, medium or hard");
