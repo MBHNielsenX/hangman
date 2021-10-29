@@ -23,10 +23,5 @@ public class main {
         System.out.println("If you guess wrong 6 times you hang the man and loose");
 
     }
-    static String getStringInput(){
-        //Neutralizes the bug that happens when you use the same String scanner multiple times.
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextLine();
-    }
 
 }
