@@ -16,6 +16,7 @@ public class Word {
     public String toString() {
         return word;
     }
+
     public int setDifficulty(ArrayList<Word> chosenWords) {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nPress 1 for easy, press 2 for medium or press 3 for hard: ");
@@ -35,6 +36,7 @@ public class Word {
     }
 
     public ArrayList<Word> setWordList(ArrayList<Word> chosenWords, int chosenDifficulty) {
+        //A method that will read different csv files depending on the chosenDifficulty
         if (chosenDifficulty == 1) {
             File easyHangman = new File ("src/hangmanwordsEasy.csv");
             try {
@@ -82,12 +84,15 @@ public class Word {
     }
 
     public Word randomWordFromList(ArrayList<Word> chosenWords) {
+        //Takes a random word from the chosen csv file
         Random rand = new Random();
         int upperbound = chosenWords.size();
         int randomNum = rand.nextInt(upperbound);
 
         return chosenWords.get(randomNum);
     }
+
+
 
 
 
